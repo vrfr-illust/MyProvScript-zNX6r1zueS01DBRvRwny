@@ -34,6 +34,7 @@ CONTROLNET_MODELS=(
 )
 
 EXTENSIONS=(
+    "https://github.com/blue-pen5805/sdweb-easy-generate-forever.git"
     "https://github.com/adieyal/sd-dynamic-prompts.git"
     "https://github.com/hako-mikan/sd-webui-supermerger.git"
     "https://github.com/hako-mikan/sd-webui-regional-prompter.git"
