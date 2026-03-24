@@ -40,6 +40,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter.git"
     "https://github.com/continue-revolution/sd-webui-animatediff.git"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
+    "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
