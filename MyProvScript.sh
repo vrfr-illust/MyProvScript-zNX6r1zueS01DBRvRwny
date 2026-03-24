@@ -43,6 +43,11 @@ EXTENSIONS=(
     "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git"
 )
 
+CONFIG_FILES=(
+    "https://raw.githubusercontent.com/vrfr-illust/MyProvScript-zNX6r1zueS01DBRvRwny/refs/heads/main/config.json"
+    "https://raw.githubusercontent.com/vrfr-illust/MyProvScript-zNX6r1zueS01DBRvRwny/refs/heads/main/ui-config.json"
+)
+
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
 
 function provisioning_start() {
@@ -53,7 +58,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
-
+    provisioning_get_files \
+        "${A1111_DIR}" \
+        "${CONFIG_FILES[@]}"
     
     # Avoid git errors because we run as root but files are owned by 'user'
     export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
