@@ -28,7 +28,7 @@
     "outdir_init_images": "outputs/init-images",
     "samples_save": true,
     "samples_format": "png",
-    "samples_filename_pattern": "[datetime<%H-%M>]-[seed]",
+    "samples_filename_pattern": "[datetime<%H-%M-%S>]-[seed]",
     "save_images_add_number": false,
     "save_images_replace_action": "Replace",
     "grid_save": true,
