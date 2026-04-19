@@ -38,9 +38,10 @@ EXTENSIONS=(
     "https://github.com/adieyal/sd-dynamic-prompts.git"
     "https://github.com/hako-mikan/sd-webui-supermerger.git"
     "https://github.com/hako-mikan/sd-webui-regional-prompter.git"
-    "https://github.com/continue-revolution/sd-webui-animatediff.git"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
     "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git"
+    "https://github.com/Bing-su/adetailer.git"
+    "https://github.com/Iyashinouta/sd-model-downloader.git"
 )
 
 CONFIG_FILES=(
