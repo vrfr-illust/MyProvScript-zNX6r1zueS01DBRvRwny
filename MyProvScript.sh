@@ -39,14 +39,10 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-supermerger.git"
     "https://github.com/hako-mikan/sd-webui-regional-prompter.git"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
-    "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser.git"
-    "https://github.com/Bing-su/adetailer.git"
-    "https://github.com/Iyashinouta/sd-model-downloader.git"
 )
 
 CONFIG_FILES=(
-    "https://raw.githubusercontent.com/vrfr-illust/MyProvScript-zNX6r1zueS01DBRvRwny/refs/heads/main/config.json"
-    "https://raw.githubusercontent.com/vrfr-illust/MyProvScript-zNX6r1zueS01DBRvRwny/refs/heads/main/ui-config.json"
+
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
