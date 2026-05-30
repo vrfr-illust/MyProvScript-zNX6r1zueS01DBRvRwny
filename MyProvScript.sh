@@ -2,6 +2,7 @@
 
 source /venv/main/bin/activate
 A1111_DIR=${WORKSPACE}/stable-diffusion-webui
+CIVITAI_TOKEN="bf6feed2d58dd87abd80b419f04f5afe"
 
 # Packages are installed after nodes so we can fix them...
 
@@ -22,6 +23,7 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://civitai.red/api/download/models/1943707?fileId=1841386"
 )
 
 VAE_MODELS=(
@@ -74,6 +76,10 @@ function provisioning_start() {
             --port 11404 \
             --exit
 
+    mkdir ${A1111_DIR}/extensions/sd-dynamic-prompts.git/wildcards
+	cp -r ./wildcards ${A1111_DIR}/extensions/sd-dynamic-prompts.git/wildcards
+	mkdir ${A1111_DIR}/models/Lora
+	cp -r ./Lora ${A1111_DIR}/models/Lora
     provisioning_print_end
 }
 
