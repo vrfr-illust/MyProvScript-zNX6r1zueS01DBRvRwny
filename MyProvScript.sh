@@ -36,9 +36,10 @@ CONTROLNET_MODELS=(
 EXTENSIONS=(
     "https://github.com/blue-pen5805/sdweb-easy-generate-forever.git"
     "https://github.com/adieyal/sd-dynamic-prompts.git"
-    "https://github.com/hako-mikan/sd-webui-supermerger.git"
+    #"https://github.com/hako-mikan/sd-webui-supermerger.git"
     "https://github.com/hako-mikan/sd-webui-regional-prompter.git"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
+    "https://github.com/zanllp/infinite-image-browsing.git"
 )
 
 CONFIG_FILES=(
