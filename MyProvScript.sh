@@ -40,6 +40,7 @@ EXTENSIONS=(
     "https://github.com/hako-mikan/sd-webui-regional-prompter.git"
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
     "https://github.com/zanllp/infinite-image-browsing.git"
+    "https://github.com/Bing-su/adetailer.git"
 )
 
 CONFIG_FILES=(
