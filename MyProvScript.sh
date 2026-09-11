@@ -41,6 +41,7 @@ EXTENSIONS=(
     "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete.git"
     "https://github.com/zanllp/infinite-image-browsing.git"
     "https://github.com/Bing-su/adetailer.git"
+    "https://github.com/namkazt/sd-webui-prompt-history.git"
 )
 
 CONFIG_FILES=(
