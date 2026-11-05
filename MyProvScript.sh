@@ -42,7 +42,7 @@ EXTENSIONS=(
     "https://github.com/zanllp/infinite-image-browsing.git"
     "https://github.com/Bing-su/adetailer.git"
     "https://github.com/namkazt/sd-webui-prompt-history.git"
-    "https://github.com/hako-mikan/sd-webui-lora-block-weight.git"
+    #"https://github.com/hako-mikan/sd-webui-lora-block-weight.git"
 )
 
 CONFIG_FILES=(
@@ -66,6 +66,10 @@ function provisioning_start() {
     # Avoid git errors because we run as root but files are owned by 'user'
     export GIT_CONFIG_GLOBAL=/tmp/temporary-git-config
     git config --file $GIT_CONFIG_GLOBAL --add safe.directory '*'
+    
+    cd /workspace/stable-diffusion-webui/extensions/sd-webui-regional-prompter.git
+    git fetch --all
+    git checkout e0a4e86
 
     # Start and exit because webui will probably require a restart
     cd "${A1111_DIR}"
