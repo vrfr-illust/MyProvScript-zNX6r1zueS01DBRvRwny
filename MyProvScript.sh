@@ -42,6 +42,7 @@ EXTENSIONS=(
     "https://github.com/zanllp/infinite-image-browsing.git"
     "https://github.com/Bing-su/adetailer.git"
     "https://github.com/namkazt/sd-webui-prompt-history.git"
+    "https://github.com/Mikubill/sd-webui-controlnet"
     #"https://github.com/hako-mikan/sd-webui-lora-block-weight.git"
 )
 
