@@ -31,6 +31,7 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
 )
 
 EXTENSIONS=(
@@ -56,7 +57,22 @@ function provisioning_start() {
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_extensions
+
+    # Download ControlNet models listed in CONTROLNET_MODELS (skip existing files)
+    provisioning_get_files \
+        "${A1111_DIR}/extensions/sd-webui-controlnet/models" \
+        "${CONTROLNET_MODELS[@]}"
+
     provisioning_get_pip_packages
+
+    # Fix MediaPipe for ControlNet without changing shared dependencies (NumPy,
+    # Pillow, protobuf, OpenCV, etc.). --no-deps prevents pip from upgrading them.
+    /venv/main/bin/python -m pip install --no-deps "mediapipe==0.10.14"
+    if /venv/main/bin/python -c "import mediapipe as mp; assert hasattr(mp, 'solutions')"; then
+        echo "MediaPipe compatibility fix applied successfully."
+    else
+        echo "WARNING: MediaPipe installed, but mp.solutions is unavailable. ControlNet may not load."
+    fi
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
