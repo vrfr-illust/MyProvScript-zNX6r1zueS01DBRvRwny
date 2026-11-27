@@ -31,7 +31,7 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
+    #"https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
 )
 
 EXTENSIONS=(
@@ -43,7 +43,7 @@ EXTENSIONS=(
     "https://github.com/zanllp/infinite-image-browsing.git"
     "https://github.com/Bing-su/adetailer.git"
     "https://github.com/namkazt/sd-webui-prompt-history.git"
-    "https://github.com/Mikubill/sd-webui-controlnet"
+    #"https://github.com/Mikubill/sd-webui-controlnet"
     #"https://github.com/hako-mikan/sd-webui-lora-block-weight.git"
 )
 
@@ -67,12 +67,12 @@ function provisioning_start() {
 
     # Fix MediaPipe for ControlNet without changing shared dependencies (NumPy,
     # Pillow, protobuf, OpenCV, etc.). --no-deps prevents pip from upgrading them.
-    /venv/main/bin/python -m pip install --no-deps "mediapipe==0.10.14"
-    if /venv/main/bin/python -c "import mediapipe as mp; assert hasattr(mp, 'solutions')"; then
-        echo "MediaPipe compatibility fix applied successfully."
-    else
-        echo "WARNING: MediaPipe installed, but mp.solutions is unavailable. ControlNet may not load."
-    fi
+    # /venv/main/bin/python -m pip install --no-deps "mediapipe==0.10.14"
+    #if /venv/main/bin/python -c "import mediapipe as mp; assert hasattr(mp, 'solutions')"; then
+    #    echo "MediaPipe compatibility fix applied successfully."
+    #else
+    #    echo "WARNING: MediaPipe installed, but mp.solutions is unavailable. ControlNet may not load."
+    #fi
     provisioning_get_files \
         "${A1111_DIR}/models/Stable-diffusion" \
         "${CHECKPOINT_MODELS[@]}"
